@@ -56,3 +56,6 @@ server/.env
 server/.venv
 client/package-lock.json
 client/package-lock.json
+server/users/migrations/
+server/**/migrations/
+server/backup
