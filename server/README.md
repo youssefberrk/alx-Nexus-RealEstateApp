@@ -90,3 +90,50 @@ The API endpoints are defined in the respective apps. You can access the admin p
 - Application
 => Manages applications for properties.
 
+## API routes
+
+The API routes are documented using Swagger. You can access the Swagger documentation at `/swagger/`.
+
+### Creating a User
+
+To create a superuser, run the following command:
+
+```sh
+python manage.py createsuperuser
+```
+
+You will be prompted to enter a username, email, and password for the superuser.
+
+### Example API Routes
+
+Here are some example(not really accurate) API routes with `curl` but dont' forget to add authentication (bearer Token) on the header as well
+commands:
+
+#### Create a User
+
+```sh
+curl -X POST "http://localhost:8000/users/" -H "Content-Type: application/json" -d '{
+  "username": "newuser",
+  "password": "password123",
+  "email": "newuser@example.com"
+}'
+```
+
+
+#### List Properties
+
+```sh
+curl -X GET "http://localhost:8000/properties/" -H "Accept: application/json"
+```
+
+#### Apply for a Property
+
+```sh
+curl -X POST "http://localhost:8000/applications/" -H "Content-Type: application/json" -d '{
+  "property_id": 1,
+  "user_id": 1,
+  "application_date": "2025-03-06"
+}'
+```
+
+You can find more detailed information about the API endpoints and their usage in the Swagger documentation.

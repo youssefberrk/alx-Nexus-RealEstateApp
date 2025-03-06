@@ -24,7 +24,7 @@ class ApplicationViewSet(viewsets.ModelViewSet):
     queryset = Application.objects.all()
     serializer_class = ApplicationSerializer
     permission_classes = [permissions.IsAuthenticated]
-    filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
+    # filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
     filterset_fields = ['property', 'tenant', 'status']
     ordering_fields = ['application_date']
     

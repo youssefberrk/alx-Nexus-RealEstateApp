@@ -25,6 +25,7 @@ class LocationViewSet(viewsets.ModelViewSet):
 class PropertyViewSet(viewsets.ModelViewSet):
     queryset = Property.objects.all()
     permission_classes = [permissions.IsAuthenticated]
+    serializer_class = PropertySerializer
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = ['property_type', 'beds', 'is_pets_allowed', 'is_parking_included']
     search_fields = ['name', 'description', 'location__city', 'location__state']

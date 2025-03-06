@@ -42,6 +42,7 @@ class PropertySerializer(serializers.ModelSerializer):
         fields = [
             'id', 'name', 'price_per_month', 'beds', 'baths', 
             'square_feet', 'property_type', 'posted_date', 
-            'average_rating', 'number_of_reviews', 'location_address',
-            'manager_name', 'photo_urls'
+            'average_rating', 'number_of_reviews', 'location',
+            'manager', 'photo_urls', 'amenities', 'highlights',
+            'is_pets_allowed', 'is_parking_included', 'tenants'
         ]

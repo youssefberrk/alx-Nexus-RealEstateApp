@@ -198,17 +198,11 @@ SIMPLE_JWT = {
     'BLACKLIST_AFTER_ROTATION': True,
 }
 
+
+LOGIN_REDIRECT_URL = 'api-auth:login'
+LOGOUT_REDIRECT_URL = 'api-auth:logout'
+
+
 # CORS settings
 CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', 'http://localhost:3000,http://127.0.0.1:3000, http://127.0.0.1:8000').split(',')
 CORS_ALLOW_CREDENTIALS = True # Allow cookies to be sent with requests
-# CORS_ALLOW_HEADERS = [
-#     'accept',
-#     'accept-encoding',
-#     'authorization',
-#     'content-type',
-#     'dnt',
-#     'origin',
-#     'user-agent',
-#     'x-csrftoken',
-#     'x-requested-with',
-# ]
