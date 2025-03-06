@@ -50,14 +50,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'rest_framework_simplejwt',
-    # 'drf_yasg',
-    # 'django_filters',
-    # 'rest_framework_filters',
-    # 'django_extensions',
+    'drf_yasg',
     'django.contrib.gis',
-    # 'django.contrib.postgres',
-    # 'django.contrib.humanize',
-    # 'django.contrib.sites',
+
     # 'allauth',`
     # 'allauth.account',
     # 'allauth.socialaccount',
@@ -185,7 +180,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # REST Framework settings
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.SessionAuthentication', # Session authentication for browsable API
+        'rest_framework_simplejwt.authentication.JWTAuthentication', # JWT authentication for other clients
     ),
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',

@@ -9,3 +9,4 @@ class TenantManager(models.TextChoices):
 class CustomUser(AbstractUser):
     role = models.CharField(max_length=20, choices=TenantManager.choices, default=TenantManager.TENANT)
     phone_number = models.CharField(max_length=20)
+    
