@@ -28,6 +28,7 @@
     "@radix-ui/react-tooltip": "^1.1.8",
     "@reduxjs/toolkit": "^2.6.0",
     "@tailwindcss/typography": "^0.5.16",
+    "axios": "^1.8.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
@@ -54,6 +55,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/axios": "^0.9.36",
     "@types/node": "^20.17.19",
     "@types/react": "^19",
     "@types/react-dom": "^19",
